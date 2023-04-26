@@ -1,0 +1,36 @@
+@use '../../../sass/custom' as *;
+@use '../../../sass/components/mixins' as *;
+@use '../../../sass/components/buttons' as *;
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    .left {
+        width: 49%;
+    }
+    .right {
+        width: 49%;
+        text-align: right;
+
+        img {
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+    p {
+        padding: 24px 0;
+    }
+
+    .buttons {
+        display: flex;
+        padding-top: 32px;
+
+        div:first-child {
+            margin-right: 1rem;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="navOpen()" class="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer1"></span>
+    <span routerLink="" class="brand">
+        LWG
+    </span>
+    <span class="spacer2"></span>
+    <ul>
+        <li>
+            <a mat-button>Features</a>
+        </li>
+        <li>
+            <a mat-button>Pricing</a>
+        </li>
+        <li>
+            <a mat-button>FAQ</a>
+        </li>
+        <li>
+            <a mat-button>Buy</a>
+        </li>
+    </ul>
+    <span class="spacer3"></span>
+    <button mat-flat-button routerLink="/signin" *ngIf="!authService.isLoggedIn()" class="btn btn-rounded btn-dark">
+        Sign In
+    </button>
+    <button mat-flat-button *ngIf="authService.isLoggedIn()" class="btn btn-rounded btn-dark" (click)="authService.signout()">
+        Sign Out
+    </button>
+</mat-toolbar>

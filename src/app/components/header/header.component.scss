@@ -1,0 +1,55 @@
+@use '../../../sass/custom' as *;
+@use '../../../sass/components/mixins' as *;
+@use '../../../sass/components/buttons' as *;
+
+mat-toolbar {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+
+    .brand {
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    .spacer1 {
+        display: none;
+        @media (max-width: 768px) {
+            display: block;
+            flex: 1 1 auto;
+        }
+    }
+    .spacer2, .spacer3 {
+        flex: 1 1 auto;
+    }
+    @media (max-width: 768px) {
+        .spacer2 {
+            display: none;
+        }
+    }
+
+    .spacer:first-child {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: lighten($black, 30%);
+
+        li {
+            list-style-type: none;
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.btn {
+    height: 1.8rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+.btn-rounded {
+    border-radius: $border-radius-size;
+    
+    color: $white;
+    font-weight: 300;
+    
+}
+
+.btn-dark {
+    background: $black;
+    &:hover {
+        background: lighten($blue, 5%);
+    }
+}
+
+.btn-light {
+    background: lighten($blue, 5%);
+    &:hover {
+        background: $blue;
+    }
+}
